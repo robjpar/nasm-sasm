@@ -17,7 +17,7 @@
 int main() {
     int result;
     
-    // (30 + 42) * 2 = 144
+    /* (30 + 42) * 2 = 144 */
     result = add42(30, 2);
     printf("Result: %i\n", result);
     
