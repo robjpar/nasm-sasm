@@ -1,5 +1,5 @@
 # NASM in SASM
 
-Practising the Netwide Assembler (NASM) in the SimpleASM (SASM) IDE on Ubuntu Linux.
+Practising the [Netwide Assembler (NASM)](https://www.nasm.us/) in the [SimpleASM (SASM)](http://dman95.github.io/SASM/english.html) IDE on Ubuntu.
 
-Based on [Intro to x86 Assembly Language](https://www.youtube.com/playlist?list=PLmxT2pVYo5LB5EzTPZGfFN0c2GDiSXgQe).
+Based on the [Intro to x86 Assembly Language](https://www.youtube.com/playlist?list=PLmxT2pVYo5LB5EzTPZGfFN0c2GDiSXgQe).
