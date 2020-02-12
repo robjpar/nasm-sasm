@@ -9,18 +9,18 @@ section .text
 main:
     mov ebp, esp; for correct debugging
     
-    sub esp, 4
-    mov [esp], byte 'H'
-    mov [esp+1], byte 'e'
-    mov [esp+2], byte 'y'
-    mov [esp+3], byte '!'
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, esp
-    mov edx, 4
-    int 0x80
+    sub esp, 4           ; esp (stack pointer) -= 4
+    mov [esp], byte 'H'  ; 'H'
+    mov [esp+1], byte 'e'; "He"
+    mov [esp+2], byte 'y'; "Hey"
+    mov [esp+3], byte '!'; "Hey!"
+    mov eax, 4           ; wite call
+    mov ebx, 1           ; stdout
+    mov ecx, esp         ; ['H']
+    mov edx, 4           ; 4 bytes
+    int 0x80             ; system call
     
-    mov eax, 1
-    mov ebx, 0
-    int 0x80
+    mov eax, 1           ; exit call
+    mov ebx, 0           ; exit status
+    int 0x80             ; system call
     

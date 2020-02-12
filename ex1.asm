@@ -9,7 +9,7 @@ section .text
 main:
     mov ebp, esp; for correct debugging
     
-    mov eax, 1
-    mov ebx, 42
-    int 0x80
+    mov eax, 1 ; exit call 
+    mov ebx, 42; exit status
+    int 0x80   ; system call
     

@@ -9,13 +9,15 @@ section .text
 main:
     mov ebp, esp; for correct debugging
     
-    mov ecx, 101
-    mov eax, 1
-    mov ebx, 42
-    cmp ecx, 100
-    jl skip
-    mov ebx, 13
+    mov eax, 1  ; exit call
+    mov ebx, 42 ; exit status
+    
+    mov ecx, 101; 101
+    cmp ecx, 100; comapare ecx = 101 to 100
+    jl skip     ; jump to skip if less (ecx = 101 not less than 100)
+    
+    mov ebx, 13 ; exit status
 
 skip:
-    int 0x80
+    int 0x80    ; system call
     

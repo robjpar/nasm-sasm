@@ -9,15 +9,15 @@ section .text
 main:
     mov ebp, esp; for correct debugging
     
-    mov ebx, 1
-    mov ecx, 4
+    mov ebx, 1  ; exit status
+    mov ecx, 4  ; 4 - loop index
 
-label:
-    add ebx, ebx
-    dec ecx
-    cmp ecx, 0
-    jg label
+label:          ; loop
+    add ebx, ebx; ebx += ebx
+    dec ecx     ; ecx--
+    cmp ecx, 0  ; compare ecx to 0
+    jg label    ; jump to label if greater
     
-    mov eax, 1
-    int 0x80
+    mov eax, 1  ; exit call
+    int 0x80    ; system call
     

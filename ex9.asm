@@ -9,20 +9,21 @@ section .text
 main:
     mov ebp, esp; for correct debugging
     
-    push 21
-    call times2
-    mov ebx, eax
-    mov eax, 1
-    int 0x80
+    push 21         ; save 21 on the stack (int = 4 bytes = 32 bits)
+    call times2     ; jump to times2
+    
+    mov ebx, eax    ; ebx (exit status) = eax = 42
+    mov eax, 1      ; exit call
+    int 0x80        ; system call
 
 times2:
-    push ebp
-    mov ebp, esp
+    push ebp        ; save ebp on the stack (int = 4 bytes = 32 bits)
+    mov ebp, esp    ; save esp (stack pointer) in ebp
     
-    mov eax, [ebp+8]
-    add eax, eax
+    mov eax, [ebp+8]; eax = 21 (int = 4 bytes = 32 bits)
+    add eax, eax    ; eax += eax == 21 += 21 == 42
     
-    mov esp, ebp
-    pop ebp
-    ret
+    mov esp, ebp    ; restore esp (stack pointer) from ebp
+    pop ebp         ; restore ebp from the stack
+    ret             ; return to the next line after the call
     
