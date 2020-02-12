@@ -1,3 +1,8 @@
+; nasm -f elf32 ex5.asm -o ex5.o
+; gcc -m32 ex5.o -o ex5.out
+; ./ex5.out
+; echo $?
+
 global main
 
 section .data

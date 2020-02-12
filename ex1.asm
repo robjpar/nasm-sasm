@@ -1,3 +1,8 @@
+; nasm -f elf32 ex1.asm -o ex1.o
+; gcc -m32 ex1.o -o ex1.out
+; ./ex1.out
+; echo $?
+
 global main
 
 section .text

@@ -1,12 +1,14 @@
 /*
     gcc -c -m32 main.c -o main.o
-    gcc -m32 main.o add42.o -o main
-    ./main
+    gcc -m32 main.o add42.o -o main.out
+    ./main.out
+    echo $?
     
     OR
     
-    gcc -m32 add42.o main.c -o main
-    ./main
+    gcc -m32 add42.o main.c -o main.out
+    ./main.out
+    echo $?
 */
 
 #include <stdio.h>

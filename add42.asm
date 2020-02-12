@@ -3,7 +3,7 @@
 global add42
 
 section .text
-;// (x + 42) * a
+; (x + 42) * a
 add42:
     push ebp
     mov ebp, esp

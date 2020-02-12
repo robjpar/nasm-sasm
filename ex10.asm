@@ -1,6 +1,7 @@
 ; nasm -f elf32 ex10.asm -o ex10.o
-; gcc -m32 ex10.o -o ex10
-; ./ex10
+; gcc -m32 ex10.o -o ex10.out
+; ./ex10.out
+; echo $?
 
 global main
 extern printf
